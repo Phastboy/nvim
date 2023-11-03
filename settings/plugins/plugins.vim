@@ -10,6 +10,8 @@ Plug 'https://github.com/ryanoasis/vim-devicons' " Developer Icons
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install', 'on': 'MarkdownPreviewToggle' } " Preview markdown in the browser
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' } " colorscheme
 
 call plug#end()

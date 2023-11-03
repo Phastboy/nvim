@@ -1,3 +1,4 @@
+" Nerdtree
 nnoremap <C-f> :NERDTreeFocus<CR>
 nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-l> :call CocActionAsync('jumpDefinition')<CR>

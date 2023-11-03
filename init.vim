@@ -1,4 +1,5 @@
 set number relativenumber
+set noshowmode
 set termguicolors
 set encoding=utf-8
 set nobackup nowritebackup

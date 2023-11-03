@@ -1,5 +1,7 @@
 call plug#begin("~/.local/share/nvim")
 
+Plug 'github/copilot.vim'
+Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc
 Plug 'https://github.com/vim-airline/vim-airline' " Status bar

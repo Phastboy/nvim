@@ -2,8 +2,8 @@ let g:coc_global_extensions = [
             \ 'coc-json', 'coc-pairs', 'coc-diagnostic', 'coc-spell-checker', 'coc-highlight', 'coc-lists',
             \ 'coc-lightbulb',
             \ 'coc-zi', 'coc-translator', 'coc-emoji', 'coc-dictionary',
-            \  'coc-webview',
-            \ 'coc-react-refactor', 'coc-html', 'coc-unocss', 'coc-cssmodules', 'coc-html-css-support', 'coc-emmet',
+            \  'coc-webview', 'coc-markdownlint', 'coc-markmap',
+            \ 'coc-react-refactor', 'coc-html', 'coc-unocss', 'coc-cssmodules', 'coc-html-css-support', 'coc-emmet', '@yaegassy/coc-tailwindcss3',
             \ 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-biome',
             \ 'coc-pyright', 'coc-clangd',
             \ 'coc-sh',
@@ -11,9 +11,6 @@ let g:coc_global_extensions = [
             \ 'coc-git', 'coc-yaml',
             \ 'coc-ultisnips', 'coc-snippets'
             \ ]
-" :CocInstall coc-tailwindcss3
-" :CocInstall coc-markdown
-" :CocInstall coc-markmap
 " Keymappings
 " <cr> to confirm completion
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

@@ -1,6 +1,19 @@
-let g:coc_global_extensions = ['coc-json', 'coc-git', 'coc-pairs', 'coc-zi', 'coc-translator', 'coc-diagnostic', '@hexuhua/coc-copilot', 'coc-sh', 'coc-webview', 'coc-markdown-preview-enhanced', 'coc-dictionary', 'coc-emmet', 'coc-ultisnips', 'coc-snippets', 'coc-spell-checker', 'coc-highlight', 'coc-prettier', '@yaegassy/coc-marksman', 'coc-html', 'coc-markmap', 'coc-unocss', 'coc-cssmodules', 'coc-yaml', 'coc-html-css-support',
-            \ 'coc-pyright', 'coc-emoji', 'coc-tsserver', 'coc-eslint', 'coc-lists', 'coc-clangd', 'coc-chatgpt', 'coc-lightbulb', 'coc-react-refactor', '@yaegassy/coc-tailwindcss3', 'coc-biome'
+let g:coc_global_extensions = [
+            \ 'coc-json', 'coc-pairs', 'coc-diagnostic', 'coc-spell-checker', 'coc-highlight', 'coc-lists',
+            \ 'coc-lightbulb',
+            \ 'coc-zi', 'coc-translator', 'coc-emoji', 'coc-dictionary',
+            \  'coc-webview',
+            \ 'coc-react-refactor', 'coc-html', 'coc-unocss', 'coc-cssmodules', 'coc-html-css-support', 'coc-emmet',
+            \ 'coc-tsserver', 'coc-eslint', 'coc-prettier', 'coc-biome',
+            \ 'coc-pyright', 'coc-clangd',
+            \ 'coc-sh',
+            \ 'coc-chatgpt', 'coc-copilot',
+            \ 'coc-git', 'coc-yaml',
+            \ 'coc-ultisnips', 'coc-snippets'
             \ ]
+" :CocInstall coc-tailwindcss3
+" :CocInstall coc-markdown
+" :CocInstall coc-markmap
 " Keymappings
 " <cr> to confirm completion
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"

@@ -1,7 +1,6 @@
 call plug#begin("~/.local/share/nvim")
 
  Plug 'mhinz/vim-startify'
-Plug 'github/copilot.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc

@@ -1,6 +1,8 @@
 call plug#begin("~/.local/share/nvim")
 
- Plug 'mhinz/vim-startify'
+Plug 'f-person/git-blame.nvim' " Git Blame
+Plug 'FabijanZulj/blame.nvim'
+Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-fugitive'
 Plug 'https://github.com/preservim/nerdtree' " NerdTree
 Plug 'https://github.com/tpope/vim-commentary' " For Commenting gcc & gc

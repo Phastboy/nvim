@@ -17,7 +17,6 @@ Plug 'honza/vim-snippets'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.4' }
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' } " colorscheme
-Plug 'kyazdani42/nvim-web-devicons'
 
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/popup.nvim'

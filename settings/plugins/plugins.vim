@@ -10,7 +10,7 @@ Plug 'https://github.com/vim-airline/vim-airline' " Status bar
 Plug 'vim-airline/vim-airline-themes' " vim airline theme
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}  " Auto Completion
 Plug 'sheerun/vim-polyglot' " syntax highlighting
-Plug 'nvim-tree/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && npx --yes yarn install' } " Preview markdown in the browser
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'

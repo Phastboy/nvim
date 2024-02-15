@@ -7,7 +7,7 @@ let g:coc_global_extensions = [
             \ 'coc-sh',
             \ 'coc-copilot',
             \ 'coc-git', 'coc-yaml',
-            \ 'coc-ultisnips', 'coc-snippets'
+            \ 'coc-snippets'
             \ ]
 " Keymappings
 " <cr> to confirm completion

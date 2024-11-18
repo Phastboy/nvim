@@ -1,1 +1,13 @@
-/pack/
+# Ignore LuaRocks files
+*.rock
+*.rockspec
+
+# Ignore Neovim swap files
+*.swp
+*.swo
+
+# Ignore Neovim undo files
+*.un~
+
+# Ignore logs
+*.log

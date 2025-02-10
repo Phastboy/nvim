@@ -15,8 +15,8 @@ function M.setup()
 			lua = { "stylua" },
 		},
 		format_on_save = {
-			timeout_ms = 2000, -- Increased timeout
-			lsp_fallback = false, -- Disable LSP fallback completely
+			timeout_ms = 2000,
+			lsp_fallback = true,
 			async = false,
 		},
 		formatters = {

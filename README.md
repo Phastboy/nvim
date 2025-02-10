@@ -18,3 +18,6 @@ Open Neovim and start using the configured setup. You can customize the configur
 
 ## Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## Key Mappings
+The available key mappings are documented in the `KEYS.md` file. Please refer to it for detailed information about the key mappings.

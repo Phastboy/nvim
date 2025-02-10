@@ -1,12 +1,8 @@
 local M = {}
 
 function M.setup()
-  local oil = require("oil")
-  local keymaps = require("config.oil_keymaps") -- Load keymaps separately
-
-  oil.setup({
+  require("oil").setup({
     default_file_explorer = true,
-    keymaps = keymaps, -- Apply keymaps
     columns = { "icon" },
     buf_options = {
       buflisted = false,
@@ -25,11 +21,17 @@ function M.setup()
     float = {
       padding = 2,
       border = "rounded",
+      max_width = 50,
+      max_height = 30,
     },
     view_options = {
       show_hidden = true,
-      natural_order = "fast",
     },
+  })
+  
+  -- Add toggle shortcut
+  vim.keymap.set("n", "<leader>o", require("config.oil_toggle").toggle, {
+    desc = "Toggle Oil File Explorer"
   })
 end
 

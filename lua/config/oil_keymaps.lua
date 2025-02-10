@@ -4,14 +4,8 @@ return {
   ["<C-h>"] = { "actions.select", opts = { horizontal = true } },
   ["<C-t>"] = { "actions.select", opts = { tab = true } },
   ["<C-p>"] = "actions.preview",
-  ["<C-c>"] = { "actions.close", mode = "n" },
+  ["<C-c>"] = "actions.close",
   ["<C-l>"] = "actions.refresh",
-  ["-"] = { "actions.parent", mode = "n" },
-  vim.keymap.set("n", "<leader>o",
-  function()
-    require("config.oil_toggle").toggle()
-  end,
-  {
-    desc = "Toggle Oil File Explorer"
-  })
+  ["-"] = "actions.parent",
+  ["<leader>o"] = "actions.toggle_trash",  -- We'll use this for toggle functionality
 }

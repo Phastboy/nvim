@@ -27,3 +27,8 @@ This configuration includes the following new plugins:
 - `noice.nvim`: Enhanced notifications and messages.
 - `oil.nvim`: File explorer with a floating window.
 - `telescope.nvim`: Fuzzy finder and more.
+
+## Features
+- Enhanced notifications and messages using `noice.nvim`.
+- File explorer with a floating window using `oil.nvim`.
+- Fuzzy finder and more using `telescope.nvim`.

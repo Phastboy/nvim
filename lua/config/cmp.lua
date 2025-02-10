@@ -3,6 +3,7 @@ local M = {}
 function M.setup()
   local cmp = require("cmp")
   local luasnip = require("luasnip")
+  local npairs = require("nvim-autopairs")
 
   -- Load friendly snippets
   require("luasnip.loaders.from_vscode").lazy_load()
@@ -10,6 +11,7 @@ function M.setup()
   cmp.setup({
     snippet = {
       expand = function(args)
+        npairs.lsp_expand(args.body)  -- Automatically expand snippets with nvim-autopairs
         luasnip.lsp_expand(args.body)
       end,
     },

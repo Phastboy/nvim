@@ -12,7 +12,7 @@ function M.setup()
 		},
 		win_options = {
 			wrap = false,
-			signcolumn = "no",
+			signcolumn = "yes",
 			cursorcolumn = false,
 			foldcolumn = "0",
 			spell = false,

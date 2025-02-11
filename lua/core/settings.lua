@@ -1,4 +1,3 @@
--- lua/core/settings.lua
 local opt = vim.opt
 local g = vim.g
 
@@ -27,3 +26,22 @@ opt.splitbelow = true -- Open horizontal splits below
 opt.lazyredraw = true -- Only redraw when needed
 opt.updatetime = 300 -- Faster completion
 opt.timeoutlen = 500 -- Faster mappings
+
+-- undo
+
+opt.undolevels = 10000 -- Max undo levels
+opt.undoreload = 10000 -- Max lines to save for undo
+
+if vim.fn.has("persistent_undo") == 1 then
+	local target_path = vim.fn.expand("~/.undodir")
+
+	-- Use double slash for versioned undo files
+	target_path = target_path .. "//"
+
+	if vim.fn.isdirectory(target_path) == 0 then
+		vim.fn.mkdir(target_path, "p", 0700)
+	end
+
+	vim.o.undodir = target_path
+	vim.o.undofile = true
+end

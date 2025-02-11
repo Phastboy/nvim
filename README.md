@@ -26,3 +26,6 @@ The available key mappings are documented in the `KEYS.md` file. Please refer to
 - Enhanced notifications and messages using `noice.nvim`.
 - File explorer with a floating window using `oil.nvim`.
 - Fuzzy finder and more using `telescope.nvim`.
+- Bufferline management with `bufferline.nvim`.
+- Multicursor support with `multicursor.nvim`.
+- Theme switching with `theming.nvim`.

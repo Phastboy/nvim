@@ -27,7 +27,7 @@
 - `<leader>cs`: Document Symbols
 
 ### File Browser
-- `<leader>fe`: File Browser
+- `<C-c>`: File Browser
 
 ### Custom Searches
 - `<leader>fw`: Grep Word

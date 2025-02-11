@@ -6,12 +6,18 @@ function M.setup()
 	bufferline.setup({
 		options = {
 			mode = "buffers",
-			numbers = "ordinal",
-			close_command = "Bdelete! %d",
-			right_mouse_command = "Bdelete! %d",
+			numbers = "none",
+			sort_by = "extension",
+			separator_style = "slant",
+			hover = {
+				enabled = true,
+				delay = 200,
+				reveal = { "close" },
+			},
+			close_command = "bdelete! %d",
+			right_mouse_command = "bdelete! %d",
 			left_mouse_command = "buffer %d",
 			middle_mouse_command = nil,
-			indicator = { style = "icon", icon = "▎" },
 			buffer_close_icon = "󰅖",
 			modified_icon = "●",
 			close_icon = "",
@@ -28,12 +34,18 @@ function M.setup()
 			color_icons = true,
 			diagnostics = "nvim_lsp",
 			diagnostics_update_in_insert = false,
+			diagnostics_update_on_event = true,
+			hover = {
+				enabled = true,
+				delay = 200,
+				reveal = { "close" },
+			},
 			offsets = {
 				{
 					filetype = "oil",
 					text = "File Explorer",
 					highlight = "Directory",
-					text_align = "left",
+					text_align = "center",
 				},
 			},
 			groups = {
@@ -58,14 +70,8 @@ function M.setup()
 		},
 	})
 
-	-- Keymaps
-	vim.keymap.set("n", "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", { desc = "Toggle pin" })
-	vim.keymap.set("n", "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", { desc = "Delete non-pinned" })
-	vim.keymap.set("n", "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", { desc = "Delete others" })
-	vim.keymap.set("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", { desc = "Delete to the right" })
-	vim.keymap.set("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", { desc = "Delete to the left" })
-	vim.keymap.set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next tab" })
-	vim.keymap.set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Previous tab" })
+	-- Load keymaps from a separate file
+	require("config.bufferline_keymaps").setup()
 end
 
 return M

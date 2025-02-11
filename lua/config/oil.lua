@@ -5,11 +5,6 @@ function M.setup()
 		default_file_explorer = true,
 		columns = {
 			"icon",
-			{
-				name = "git_status",
-				highlight = "Special",
-				width = 1,
-			},
 		},
 		buf_options = {
 			buflisted = false,

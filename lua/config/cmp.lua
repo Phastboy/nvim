@@ -3,9 +3,9 @@ local M = {}
 function M.setup()
 	local cmp = require("cmp")
 	local luasnip = require("luasnip")
-	local npairs = require("nvim-autopairs")
+	local lspkind = require("lspkind")
 
-	-- Load friendly snippets
+	-- Load snippets from VS Code
 	require("luasnip.loaders.from_vscode").lazy_load()
 
 	cmp.setup({
@@ -17,28 +17,49 @@ function M.setup()
 		mapping = require("config.cmp_keymaps").set_cmp_keymaps(),
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },
-			{ name = "luasnip" }, -- Add luasnip source
+			{ name = "luasnip" },
 			{ name = "buffer" },
 			{ name = "path" },
+			{ name = "nvim_lua" },
+			{ name = "npm" },
 		}),
 		formatting = {
-			format = require("lspkind").cmp_format({
+			fields = { "kind", "abbr", "menu" },
+			format = lspkind.cmp_format({
 				mode = "symbol_text",
 				maxwidth = 50,
 				ellipsis_char = "...",
+				menu = {
+					nvim_lsp = "[LSP]",
+					luasnip = "[Snip]",
+					buffer = "[Buf]",
+					path = "[Path]",
+					nvim_lua = "[Lua]",
+					npm = "[NPM]",
+				},
 			}),
 		},
+		window = {
+			completion = {
+				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+				col_offset = -3,
+				side_padding = 0,
+			},
+			documentation = {
+				border = "rounded",
+			},
+		},
 		experimental = {
-			ghost_text = true,
+			ghost_text = {
+				hl_group = "CmpGhostText", -- Ensure this highlight group exists
+			},
 		},
 	})
 
-	-- Enable command-line completions
+	-- Command-line completion setup
 	cmp.setup.cmdline({ "/", "?" }, {
 		mapping = cmp.mapping.preset.cmdline(),
-		sources = {
-			{ name = "buffer" },
-		},
+		sources = { { name = "buffer" } },
 	})
 end
 

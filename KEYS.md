@@ -60,3 +60,28 @@
 
 ## Linting Key Mappings
 - `<leader>ll`: Trigger linting
+
+## Bufferline Key Mappings
+- `<leader>bp`: Toggle pin
+- `<leader>bP`: Delete non-pinned
+- `<leader>bo`: Delete others
+- `<leader>br`: Delete to the right
+- `<leader>bl`: Delete to the left
+- `<Tab>`: Next tab
+- `<S-Tab>`: Previous tab
+- `<leader>bd`: Delete buffer
+
+## Multicursor Key Mappings
+- `<leader>n`: Match add cursor forward
+- `<leader>s`: Match skip cursor forward
+- `<leader>N`: Match add cursor backward
+- `<leader>S`: Match skip cursor backward
+- `<leader>A`: Add cursors for all matches
+- `<left>`: Next cursor
+- `<right>`: Previous cursor
+- `<leader>x`: Delete current cursor
+- `<C-q>`: Toggle cursors
+
+## Theming Key Mappings
+- `<leader>tt`: Cycle Themes
+- `<leader>th`: Preview Themes

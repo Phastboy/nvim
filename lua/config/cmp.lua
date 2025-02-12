@@ -22,6 +22,11 @@ function M.setup()
 			{ name = "path" },
 			{ name = "nvim_lua" },
 			{ name = "npm" },
+			{ name = "spell" },
+			{
+				name = "dictionary",
+				keyword_length = 2,
+			},
 		}),
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
@@ -41,6 +46,7 @@ function M.setup()
 		},
 		window = {
 			completion = {
+				border = "rounded",
 				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 				col_offset = -3,
 				side_padding = 0,

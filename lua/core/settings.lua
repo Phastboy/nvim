@@ -49,3 +49,9 @@ end
 -- control suggestions height
 vim.opt.completeopt = "menu,menuone,noselect,noinsert"
 vim.opt.pumheight = 10 -- Limit completion menu height
+
+-- words
+vim.opt.spell = true -- Enable spell checking
+vim.opt.spelllang = "en" -- English dictionary
+vim.opt.spellsuggest = "best" -- Better suggestion sorting
+vim.opt.spelloptions = "camel" -- Recognize camelCase words

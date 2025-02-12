@@ -11,6 +11,7 @@ return {
 			"rafamadriz/friendly-snippets",
 			"onsails/lspkind.nvim",
 		},
+		event = "InsertEnter", -- Load only when inserting text
 		config = function()
 			require("config.cmp").setup()
 		end,

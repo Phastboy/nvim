@@ -7,6 +7,10 @@ autocmd("TextYankPost", {
 	end,
 })
 
--- vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#61afef" })
--- vim.api.nvim_set_hl(0, "AlphaButtons", { fg = "#98c379" })
--- vim.api.nvim_set_hl(0, "AlphaFooter", { fg = "#c678dd" })
+-- Enable spellcheck only for markdown & text files
+autocmd("FileType", {
+	pattern = { "markdown", "text" },
+	callback = function()
+		vim.opt.spell = true
+	end,
+})

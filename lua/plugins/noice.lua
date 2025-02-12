@@ -7,7 +7,7 @@ return {
 			"rcarriga/nvim-notify",
 		},
 		opts = {
-			require("config.noice_keymaps").setup(),
+			require("config.noice").setup(),
 		},
 	},
 }

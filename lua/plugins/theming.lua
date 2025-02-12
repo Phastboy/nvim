@@ -1,11 +1,7 @@
 return {
 	{
 		"folke/tokyonight.nvim", -- Lightweight & popular
-		lazy = false, -- Load immediately
-		priority = 1000, -- Load before other plugins
-		config = function()
-			vim.cmd.colorscheme("tokyonight-night")
-		end,
+		opts = {},
 	},
 
 	-- Alternative minimal themes (choose one)

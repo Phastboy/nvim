@@ -1,10 +1,10 @@
 return {
 	{
 		"nvim-treesitter/nvim-treesitter",
+		event = { "BufReadPost" }, -- Lazy-load on buffer open
 		build = ":TSUpdate",
 		opts = {
 			ensure_installed = {
-				"lua",
 				"typescript",
 				"javascript",
 				"json",

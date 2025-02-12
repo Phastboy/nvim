@@ -6,14 +6,15 @@ return {
 			"hrsh7th/cmp-buffer",
 			"hrsh7th/cmp-path",
 			"hrsh7th/cmp-cmdline",
-			"L3MON4D3/LuaSnip",
-			"saadparwaiz1/cmp_luasnip",
-			"rafamadriz/friendly-snippets",
 			"onsails/lspkind.nvim",
 		},
 		event = "InsertEnter", -- Load only when inserting text
 		config = function()
 			require("config.cmp").setup()
 		end,
+	},
+	{
+		"hrsh7th/cmp-cmdline", -- Lazy-load cmdline completion
+		event = "CmdlineEnter",
 	},
 }

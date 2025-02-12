@@ -5,6 +5,7 @@ opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.termguicolors = true
+vim.cmd([[colorscheme tokyonight]])
 
 -- Indentation
 opt.tabstop = 2
@@ -37,3 +38,21 @@ opt.pumheight = 10
 opt.spell = false
 opt.spelllang = "en"
 opt.spelloptions = "camel"
+
+opt.lazyredraw = false
+
+-- Memory/display limits
+opt.synmaxcol = 200
+opt.maxmempattern = 2000
+
+-- File caching
+opt.swapfile = false
+opt.backup = false
+opt.writebackup = false
+
+-- Track performance metrics
+vim.api.nvim_create_user_command("PerfReport", function()
+	local stats = require("lazy").stats()
+	local report = string.format("Startup: %dms (Loaded %d/%d plugins)", stats.startuptime, stats.loaded, stats.count)
+	print(report)
+end, {})

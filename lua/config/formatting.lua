@@ -17,7 +17,7 @@ function M.setup()
 		format_on_save = {
 			timeout_ms = 2000,
 			lsp_fallback = true,
-			async = false,
+			async = true,
 		},
 		formatters = {
 			prettier = {
@@ -29,7 +29,7 @@ function M.setup()
 	})
 
 	vim.keymap.set("n", "<leader>fp", function()
-		conform.format({ async = false })
+		conform.format({ async = true })
 	end, { desc = "Format File" })
 end
 

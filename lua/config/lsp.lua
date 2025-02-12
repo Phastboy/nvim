@@ -13,7 +13,6 @@ function M.setup()
 	})
 
 	-- Configure LSP servers
-	-- In lua/config/lsp.lua
 	require("mason-lspconfig").setup({
 		ensure_installed = {
 			"jsonls",
@@ -22,15 +21,18 @@ function M.setup()
 		automatic_installation = true,
 	})
 
-	local lspconfig = require("lspconfig")
-	local keymaps = require("config.lsp_keymaps")
-	local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-	-- Common LSP setup
-	local on_attach = function(client, bufnr)
-		client.server_capabilities.documentFormattingProvider = false
-		keymaps.set_lsp_keymaps(bufnr)
+	local function setup_lsp(lsp_name)
+		require("lspconfig")[lsp_name].setup({
+			capabilities = require("cmp_nvim_lsp").default_capabilities(),
+			on_attach = function(client, bufnr)
+				-- client.server_capabilities.documentFormattingProvider = false
+				require("config.lsp_keymaps").set_lsp_keymaps(bufnr)
+			end,
+		})
 	end
+
+	setup_lsp("jsonls")
+	setup_lsp("bashls")
 end
 
 return M

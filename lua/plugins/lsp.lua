@@ -3,7 +3,7 @@ return {
 		"neovim/nvim-lspconfig",
 		event = "BufReadPre",
 		dependencies = {
-			"williamboman/mason.nvim",
+			{ "williamboman/mason.nvim", cmd = "Mason" },
 			"williamboman/mason-lspconfig.nvim",
 		},
 		config = function()

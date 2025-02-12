@@ -1,8 +1,8 @@
 return {
 	{
 		"jake-stewart/multicursor.nvim",
-		lazy = true,
 		branch = "1.0",
+		keys = { "<leader>n", "<leader>N", "<leader>A" },
 		config = function()
 			require("config.multicursor").setup()
 		end,

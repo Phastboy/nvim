@@ -12,7 +12,7 @@ return {
 		dependencies = {
 			"stevearc/oil.nvim",
 		},
-
+		lazy = true,
 		config = true,
 	},
 }

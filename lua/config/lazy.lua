@@ -13,7 +13,7 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
 	spec = { { import = "plugins" } },
 	install = { colorscheme = { "tokyo-knight" } },
-	checker = { enabled = true, concurrency = 2 },
+	checker = { enabled = false },
 	profiling = { level = "debug" },
 	performance = {
 		rtp = { disabled_plugins = { "gzip", "matchit", "tarPlugin", "zipPlugin", "netrwPlugin" } },

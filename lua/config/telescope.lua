@@ -58,7 +58,7 @@ function M.setup()
 	vim.keymap.set("n", "<leader>cs", builtin.lsp_document_symbols, { desc = "Document Symbols" })
 
 	-- File browser
-	vim.keymap.set("n", "<C-f>", extensions.file_browser.file_browser, { desc = "File Browser" })
+	vim.keymap.set("n", "<leader>ef", extensions.file_browser.file_browser, { desc = "File Browser" })
 end
 
 return M

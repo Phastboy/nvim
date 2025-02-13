@@ -1,8 +1,11 @@
 local set = vim.keymap.set
 
-set("n", "<C-s>", "<Cmd>w<CR>", { desc = "Save file" })
+set({ "n","i" }, "<C-s>", "<Cmd>w<CR>", { desc = "Save file" })
 set("n", "<leader>q", "<Cmd>q<CR>", { desc = "Exit file" })
 set("n", "<leader>wq", "<Cmd>wq<CR>", { desc = "Save and Exit file" })
+  
+-- docs
+set("n", "<leader>dm", "<Cmd>Neogen<CR>", { desc = "Generate module docs" })
 
 -- Track performance metrics
 vim.api.nvim_create_user_command("PerfReport", function()

@@ -1,0 +1,190 @@
+--- Startup times for process: Primary/TUI ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.017  000.017: --- NVIM STARTING ---
+000.359  000.342: event init
+000.591  000.231: early init
+000.606  000.016: locale set
+000.702  000.095: init first window
+001.704  001.002: inits 1
+001.739  000.035: window checked
+001.747  000.008: parsing arguments
+004.517  001.294  001.294: require('vim.shared')
+007.033  000.739  000.739: require('vim.inspect')
+008.317  001.217  001.217: require('vim._options')
+008.328  003.795  001.839: require('vim._editor')
+008.332  005.364  000.275: require('vim._init_packages')
+008.339  001.228: init lua interpreter
+011.241  002.902: --- NVIM STARTED ---
+
+--- Startup times for process: Embedded ---
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.009  000.009: --- NVIM STARTING ---
+000.224  000.215: event init
+000.617  000.393: early init
+000.638  000.021: locale set
+000.735  000.097: init first window
+001.583  000.848: inits 1
+001.660  000.077: window checked
+001.667  000.007: parsing arguments
+004.319  001.285  001.285: require('vim.shared')
+006.585  000.716  000.716: require('vim.inspect')
+007.833  001.184  001.184: require('vim._options')
+007.841  003.509  001.609: require('vim._editor')
+007.846  005.066  000.271: require('vim._init_packages')
+007.852  001.119: init lua interpreter
+008.438  000.586: expanding arguments
+008.490  000.052: inits 2
+009.125  000.635: init highlight
+009.128  000.004: waiting for UI
+009.405  000.277: done waiting for UI
+009.414  000.008: clear screen
+010.692  000.172  000.172: require('vim.keymap')
+011.947  002.519  002.347: require('vim._defaults')
+011.954  000.022: init default mappings & autocommands
+013.827  000.185  000.185: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/ftplugin.vim
+014.071  000.094  000.094: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/indent.vim
+014.293  000.051  000.051: sourcing $VIM/sysinit.vim
+017.227  002.177  002.177: require('lazy')
+017.331  000.052  000.052: require('ffi')
+019.274  000.785  000.785: require('vim.fs')
+019.866  000.446  000.446: require('vim.uri')
+019.937  002.597  001.366: require('vim.loader')
+020.712  000.708  000.708: require('lazy.stats')
+021.375  000.589  000.589: require('lazy.core.util')
+022.207  000.824  000.824: require('lazy.core.config')
+022.896  000.303  000.303: require('lazy.core.handler')
+023.543  000.232  000.232: require('lazy.pkg')
+023.556  000.428  000.196: require('lazy.core.meta')
+023.569  000.665  000.237: require('lazy.core.plugin')
+023.584  001.365  000.397: require('lazy.core.loader')
+024.809  000.198  000.198: require('lazy.core.fragments')
+028.069  000.216  000.216: require('config.noice')
+031.137  000.537  000.537: require('noice.util.lazy')
+031.177  003.092  002.555: require('noice')
+032.349  000.624  000.624: require('vim.health')
+034.095  000.957  000.957: require('noice.util.call')
+034.150  001.764  000.807: require('noice.util')
+034.183  002.998  000.611: require('noice.health')
+034.991  000.698  000.698: require('noice.config')
+042.215  000.284  000.284: require('lazy.core.handler.event')
+042.237  000.600  000.316: require('lazy.core.handler.ft')
+042.421  000.174  000.174: require('lazy.core.handler.cmd')
+042.630  000.197  000.197: require('lazy.core.handler.keys')
+044.423  000.575  000.575: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua
+045.462  000.099  000.099: sourcing /data/data/com.termux/files/home/.local/share/nvim/lazy/plenary.nvim/plugin/plenary.vim
+047.583  000.591  000.591: require('vim.lsp.log')
+049.066  001.460  001.460: require('vim.lsp.protocol')
+052.080  001.702  001.702: require('vim.lsp._snippet_grammar')
+052.555  000.446  000.446: require('vim.highlight')
+052.719  000.137  000.137: require('vim.F')
+052.797  003.706  001.421: require('vim.lsp.util')
+053.682  000.530  000.530: require('vim.lsp.sync')
+053.785  000.977  000.447: require('vim.lsp._changetracking')
+055.371  001.578  001.578: require('vim.lsp.rpc')
+055.728  009.308  000.997: require('vim.lsp')
+057.209  001.471  001.471: require('lspconfig.util')
+057.290  011.108  000.329: sourcing /data/data/com.termux/files/home/.local/share/nvim/lazy/nvim-lspconfig/plugin/lspconfig.lua
+059.175  000.222  000.222: require('lspconfig.async')
+059.194  000.451  000.229: require('lspconfig.configs')
+059.223  000.762  000.311: require('lspconfig')
+059.579  000.206  000.206: require('typescript-tools.config')
+059.904  000.318  000.318: require('typescript-tools.protocol.constants')
+060.962  000.152  000.152: require('plenary.bit')
+061.122  000.149  000.149: require('plenary.functional')
+061.203  000.663  000.362: require('plenary.path')
+061.579  000.172  000.172: require('plenary.compat')
+061.599  000.387  000.215: require('plenary.job')
+061.628  001.410  000.360: require('typescript-tools.tsserver_provider')
+061.834  000.201  000.201: require('typescript-tools.process')
+062.052  000.212  000.212: require('typescript-tools.request_queue')
+062.197  000.138  000.138: require('typescript-tools.protocol.progress')
+062.497  000.155  000.155: require('typescript-tools.utils')
+062.518  000.316  000.161: require('typescript-tools.protocol.module_mapper')
+062.662  000.140  000.140: require('typescript-tools.protocol.pending_diagnostic')
+063.695  000.127  000.127: require('plenary.tbl')
+063.706  000.273  000.146: require('plenary.vararg.rotate')
+063.710  000.413  000.140: require('plenary.vararg')
+063.835  000.120  000.120: require('plenary.errors')
+063.846  000.729  000.195: require('plenary.async.async')
+064.588  000.156  000.156: require('plenary.async.structs')
+064.606  000.482  000.326: require('plenary.async.control')
+064.627  000.640  000.158: require('plenary.async.util')
+064.633  000.782  000.142: require('plenary.async.tests')
+064.638  001.750  000.240: require('plenary.async')
+064.904  000.263  000.263: require('plenary.async.uv_async')
+065.307  000.205  000.205: require('vim.ui')
+065.316  000.403  000.198: require('typescript-tools.async')
+065.339  002.671  000.256: require('typescript-tools.api')
+065.815  000.471  000.471: require('typescript-tools.protocol.utils')
+065.839  005.925  000.365: require('typescript-tools.tsserver')
+066.541  000.245  000.245: require('typescript-tools.autocommands.common')
+066.569  000.505  000.259: require('typescript-tools.autocommands.diagnostics')
+066.779  000.205  000.205: require('typescript-tools.autocommands.code_lens')
+067.002  000.218  000.218: require('typescript-tools.autocommands.jsx_close_tag')
+067.020  001.176  000.248: require('typescript-tools.autocommands')
+067.283  000.254  000.254: require('typescript-tools.custom_handlers')
+067.504  000.215  000.215: require('typescript-tools.request_router')
+067.959  000.234  000.234: require('typescript-tools.integrations')
+067.971  000.461  000.228: require('typescript-tools.internal_commands')
+067.987  008.759  000.204: require('typescript-tools.rpc')
+067.994  010.352  000.832: require('typescript-tools')
+069.016  000.335  000.335: require('lspconfig.manager')
+075.157  000.127  000.127: sourcing /data/data/com.termux/files/home/.local/share/nvim/lazy/nvim-web-devicons/plugin/nvim-web-devicons.vim
+075.571  000.274  000.274: require('config.oil')
+078.311  002.731  002.731: require('oil')
+079.165  000.826  000.826: require('oil.ringbuf')
+080.691  001.510  001.510: require('oil.config')
+089.077  007.252  007.252: require('vim.filetype')
+091.170  000.420  000.420: require('oil.fs')
+091.739  000.152  000.152: require('oil.constants')
+091.767  000.580  000.428: require('oil.util')
+092.916  000.200  000.200: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/editorconfig.lua
+094.991  001.932  001.932: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/fzf.vim
+095.734  000.465  000.465: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/gzip.vim
+096.155  000.278  000.278: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/man.lua
+098.178  000.574  000.574: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/pack/dist/opt/matchit/plugin/matchit.vim
+098.264  001.929  001.356: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchit.vim
+098.872  000.459  000.459: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/matchparen.vim
+099.194  000.055  000.055: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/netrwPlugin.vim
+099.633  000.234  000.234: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/osc52.lua
+100.280  000.523  000.523: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/rplugin.vim
+100.745  000.258  000.258: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/shada.vim
+100.981  000.069  000.069: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/spellfile.vim
+101.531  000.340  000.340: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tarPlugin.vim
+102.002  000.329  000.329: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tohtml.lua
+102.226  000.064  000.064: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/tutor.vim
+102.847  000.478  000.478: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/plugin/zipPlugin.vim
+103.338  088.845  028.559: require('config.lazy')
+105.820  002.228  002.228: require('core.settings')
+108.387  002.159  002.159: require('vim.lsp.buf')
+108.584  002.745  000.585: require('core.misc')
+108.921  000.330  000.330: require('config.theme')
+114.650  000.151  000.151: require('tokyonight.config')
+114.675  000.366  000.215: require('tokyonight')
+115.199  000.214  000.214: require('tokyonight.util')
+115.210  000.394  000.179: require('tokyonight.theme')
+115.733  000.273  000.273: require('tokyonight.colors')
+116.500  000.276  000.276: require('tokyonight.hsluv')
+117.636  000.318  000.318: require('tokyonight.groups')
+121.081  006.978  005.351: sourcing /data/data/com.termux/files/home/.local/share/nvim/lazy/tokyonight.nvim/colors/tokyonight.lua
+121.316  017.969  005.689: require('core')
+121.327  106.912  000.099: sourcing /data/data/com.termux/files/home/.config/nvim/init.lua
+121.364  002.167: sourcing vimrc file(s)
+122.272  000.245  000.245: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/filetype.lua
+123.367  000.344  000.344: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/synload.vim
+123.622  001.055  000.711: sourcing /data/data/com.termux/files/usr/share/nvim/runtime/syntax/syntax.vim
+123.651  000.987: inits 3
+151.955  028.304: reading ShaDa
+152.222  000.267: opening buffers
+152.406  000.185: BufEnter autocommands
+152.417  000.011: editing files in windows
+152.443  000.026: --- NVIM STARTED ---
+

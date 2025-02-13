@@ -1,57 +1,50 @@
 local opt = vim.opt
-local g = vim.g
 
 -- UI
-opt.number = true -- Show line numbers
-opt.relativenumber = true -- Relative line numbers
-opt.cursorline = true -- Highlight the current line
-opt.termguicolors = true -- Enable 24-bit RGB colors
+opt.number = true
+opt.relativenumber = true
+opt.cursorline = true
+opt.termguicolors = true
 
--- Tabs & Indentation
-opt.tabstop = 2 -- Number of spaces a tab counts for
-opt.shiftwidth = 2 -- Number of spaces for autoindent
-opt.expandtab = true -- Convert tabs to spaces
-opt.smartindent = true -- Enable smart indentation
+-- Indentation
+opt.tabstop = 2
+opt.shiftwidth = 2
+opt.expandtab = true
+opt.smartindent = true
+
+-- Performance Tweaks
+opt.updatetime = 200 -- Speed up CursorHold events
+opt.timeoutlen = 300 -- Faster keybindings
 
 -- Searching
-opt.ignorecase = true -- Case insensitive searching
-opt.smartcase = true -- Case-sensitive if uppercase present
-opt.hlsearch = false -- Don't highlight search results
+opt.ignorecase = true
+opt.smartcase = true
+opt.hlsearch = false
 
 -- Splits
-opt.splitright = true -- Open vertical splits to the right
-opt.splitbelow = true -- Open horizontal splits below
+opt.splitright = true
+opt.splitbelow = true
 
--- Performance
-opt.lazyredraw = true -- Only redraw when needed
-opt.updatetime = 300 -- Faster completion
-opt.timeoutlen = 500 -- Faster mappings
+-- Undo
+opt.undofile = true
+opt.undodir = vim.fn.expand("~/.undodir")
 
--- undo
+-- Completion
+opt.completeopt = "menu,menuone,noselect"
+opt.pumheight = 10
 
-opt.undolevels = 10000 -- Max undo levels
-opt.undoreload = 10000 -- Max lines to save for undo
+-- Disable spell checking by default
+opt.spell = false
+opt.spelllang = "en"
+opt.spelloptions = "camel"
 
-if vim.fn.has("persistent_undo") == 1 then
-	local target_path = vim.fn.expand("~/.undodir")
+opt.lazyredraw = false
 
-	-- Use double slash for versioned undo files
-	target_path = target_path .. "//"
+-- Memory/display limits
+opt.synmaxcol = 200
+opt.maxmempattern = 2000
 
-	if vim.fn.isdirectory(target_path) == 0 then
-		vim.fn.mkdir(target_path, "p", 0700)
-	end
-
-	vim.o.undodir = target_path
-	vim.o.undofile = true
-end
-
--- control suggestions height
-vim.opt.completeopt = "menu,menuone,noselect,noinsert"
-vim.opt.pumheight = 10 -- Limit completion menu height
-
--- words
-vim.opt.spell = true -- Enable spell checking
-vim.opt.spelllang = "en" -- English dictionary
-vim.opt.spellsuggest = "best" -- Better suggestion sorting
-vim.opt.spelloptions = "camel" -- Recognize camelCase words
+-- File caching
+opt.swapfile = false
+opt.backup = false
+opt.writebackup = false

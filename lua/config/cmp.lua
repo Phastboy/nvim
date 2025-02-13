@@ -1,33 +1,21 @@
 local M = {}
 
 function M.setup()
-	local cmp = require("cmp")
-	local luasnip = require("luasnip")
-	local lspkind = require("lspkind")
+  local cmp = require("cmp")
+  local lspkind = require("lspkind")
 
-	-- Load snippets from VS Code
-	require("luasnip.loaders.from_vscode").lazy_load()
-
-	cmp.setup({
-		snippet = {
-			expand = function(args)
-				luasnip.lsp_expand(args.body)
-			end,
-		},
-		mapping = require("config.cmp_keymaps").set_cmp_keymaps(),
-		sources = cmp.config.sources({
-			{ name = "nvim_lsp" },
-			{ name = "luasnip" },
-			{ name = "buffer" },
-			{ name = "path" },
-			{ name = "nvim_lua" },
-			{ name = "npm" },
-			{ name = "spell" },
-			{
-				name = "dictionary",
-				keyword_length = 2,
-			},
-		}),
+  cmp.setup({
+    mapping = cmp.mapping.preset.insert({
+      ["<C-Space>"] = cmp.mapping.complete(),
+      ["<CR>"] = cmp.mapping.confirm({ select = true }),
+      ["<Tab>"] = cmp.mapping.select_next_item(),
+      ["<S-Tab>"] = cmp.mapping.select_prev_item(),
+    }),
+    sources = cmp.config.sources({
+      { name = "nvim_lsp" }, -- Main LSP completions
+      { name = "buffer" },   -- Current buffer words
+      { name = "path" },     -- File system paths
+    }),
 		formatting = {
 			fields = { "kind", "abbr", "menu" },
 			format = lspkind.cmp_format({
@@ -36,11 +24,8 @@ function M.setup()
 				ellipsis_char = "...",
 				menu = {
 					nvim_lsp = "[LSP]",
-					luasnip = "[Snip]",
 					buffer = "[Buf]",
 					path = "[Path]",
-					nvim_lua = "[Lua]",
-					npm = "[NPM]",
 				},
 			}),
 		},
@@ -55,18 +40,10 @@ function M.setup()
 				border = "rounded",
 			},
 		},
-		experimental = {
-			ghost_text = {
-				hl_group = "CmpGhostText", -- Ensure this highlight group exists
-			},
-		},
-	})
-
-	-- Command-line completion setup
-	cmp.setup.cmdline({ "/", "?" }, {
-		mapping = cmp.mapping.preset.cmdline(),
-		sources = { { name = "buffer" } },
-	})
+    experimental = {
+      ghost_text = true,
+    },
+  })
 end
 
 return M

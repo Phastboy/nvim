@@ -1,7 +1,6 @@
 local M = {}
 
 function M.setup()
-	-- Safely require gitsigns
 	local gs = require("gitsigns")
 	local map = vim.keymap.set
 
@@ -42,9 +41,6 @@ function M.setup()
 		gs.blame_line({ full = true })
 	end, { desc = "Blame line" })
 	map("n", "<leader>hd", gs.diffthis, { desc = "Diff against index" })
-
-	-- Git Blame Keymap
-	map("n", "<leader>gb", "<cmd>GitBlameToggle<cr>", { desc = "Toggle Git blame" })
 end
 
 return M

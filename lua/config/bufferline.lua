@@ -70,8 +70,16 @@ function M.setup()
 		},
 	})
 
-	-- Load keymaps from a separate file
-	require("config.bufferline_keymaps").setup()
+  -- keymaps
+local set = vim.keymap.set
+  set("n", "<leader>bp", "<Cmd>BufferLineTogglePin<CR>", { desc = "Toggle pin" })
+  set("n", "<leader>bP", "<Cmd>BufferLineGroupClose ungrouped<CR>", { desc = "Delete non-pinned" })
+  set("n", "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", { desc = "Delete others" })
+  set("n", "<leader>br", "<Cmd>BufferLineCloseRight<CR>", { desc = "Delete to the right" })
+  set("n", "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", { desc = "Delete to the left" })
+  set("n", "<Tab>", "<Cmd>BufferLineCycleNext<CR>", { desc = "Next tab" })
+  set("n", "<S-Tab>", "<Cmd>BufferLineCyclePrev<CR>", { desc = "Previous tab" })
+  set("n", "<leader>bd", "<Cmd>bdelete<CR>", { desc = "Delete buffer" })
 end
 
 return M

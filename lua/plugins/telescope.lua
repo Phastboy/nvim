@@ -1,6 +1,7 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
+    event="VimEnter",
     dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
@@ -8,7 +9,6 @@ return {
     },
     config = function()
       require("config.telescope").setup()
-      require("config.telescope_keymaps").setup()
     end,
   },
 }

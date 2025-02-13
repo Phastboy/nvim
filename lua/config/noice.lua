@@ -1,69 +1,39 @@
 local M = {}
 
 function M.setup()
-  local keymaps=require("config.noice_keymaps")
   require("noice").setup({
-    cmdline = {
-      enabled = true,
-      view = "cmdline_popup",
-      format = {
-        cmdline = { pattern = "^:", icon = " ", lang = "vim" },
-        search_down = { kind = "search", pattern = "^/", icon = " ", lang = "regex" },
-        search_up = { kind = "search", pattern = "^%?", icon = " ", lang = "regex" },
-        filter = { pattern = "^:%s*!", icon = "$", lang = "bash" },
-      },
+  lsp = {
+    -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
+    override = {
+      ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
+      ["vim.lsp.util.stylize_markdown"] = true,
+      ["cmp.entry.get_documentation"] = true, -- requires hrsh7th/nvim-cmp
     },
-    messages = {
-      enabled = true,
-      view = "notify",
-      view_error = "notify",
-      view_warn = "notify",
-    },
-    popupmenu = {
-      enabled = true,
-      backend = "nui",
-    },
-    notify = {
-      enabled = true,
-      view = "notify",
-    },
-    lsp = {
-      progress = {
-        enabled = true,
-        format = "lsp_progress",
-        format_done = "lsp_progress_done",
-        throttle = 1000 / 30,
-      },
-      override = {
-        ["vim.lsp.util.convert_input_to_markdown_lines"] = true,
-        ["vim.lsp.util.stylize_markdown"] = true,
-        ["cmp.entry.get_documentation"] = true,
-      },
-    },
-    presets = {
-      bottom_search = true,
-      command_palette = true,
-      long_message_to_split = true,
-      lsp_doc_border = true,
-    },
-    routes = {
-      {
-        filter = {
-          event = "msg_show",
-          kind = "",
-          find = "written",
-        },
-        opts = { skip = true },
-      },
-      {
-        filter = { event = "msg_show", find = "%d+L, %d+B" },
-        opts = { skip = true },
-      },
-    },
-  })
+  },
+  presets = {
+    bottom_search = true,
+    command_palette = true,
+    long_message_to_split = true,
+    inc_rename = true,
+    lsp_doc_border = true,
+  },
+})
 
-  -- Load keymaps from separate file
-  require("config.noice_keymaps").setup()
+  vim.keymap.set("n", "<leader>nl", function()
+    require("noice").cmd("last")
+  end, { desc = "Noice Last Message" })
+
+  vim.keymap.set("n", "<leader>nh", function()
+    require("noice").cmd("history")
+  end, { desc = "Noice History" })
+
+  vim.keymap.set("n", "<leader>na", function()
+    require("noice").cmd("all")
+  end, { desc = "Noice All" })
+
+  vim.keymap.set("n", "<leader>nd", function()
+    require("noice").cmd("dismiss")
+  end, { desc = "Dismiss All Notifications" })
 end
 
 return M

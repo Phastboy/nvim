@@ -2,7 +2,7 @@
 
 ## Description
 
-This repository contains a Neovim configuration setup using Lua. It includes various plugins and settings to enhance the Neovim experience.
+This repository contains a Neovim configuration setup using Lua. It includes various plugins and settings to enhance the Neovim experience. This configuration is based on NvChad.
 
 ## Installation
 
@@ -10,35 +10,18 @@ This repository contains a Neovim configuration setup using Lua. It includes var
    ```sh
    git clone https://github.com/Phastboy/nvim.git ~/.config/nvim
    ```
-2. Install the required plugins:
-   ```sh
-   nvim +PackerSync
-   ```
 
-## Usage
+## Purpose and Features
 
-Open Neovim and start using the configured setup. You can customize the configuration by editing the files in the `lua` directory.
+This repository aims to provide a comprehensive Neovim configuration that enhances the development experience if you're doing javascript and typescript things. It includes features such as:
 
-## Key Mappings
+- Syntax highlighting
+- Autocompletion
+- Linting and formatting
+- File browsing
+- Git integration
+- And more...
 
-The available key mappings are documented in the `KEYS.md` file. Please refer to it for detailed information about the key mappings.
+## Acknowledgements
 
-## Features
-
-- Enhanced notifications and messages using `noice.nvim`.
-- File explorer with a floating window using `oil.nvim`.
-- Fuzzy finder and more using `telescope.nvim`.
-- Bufferline management with `bufferline.nvim`.
-- Multicursor support with `multicursor.nvim`.
-- Theme switching with `theming.nvim`.
-
-For dictionary complication, you might need:
-
-```
-mkdir -p ~/.local/share/dict
-curl -o ~/.local/share/dict/words https://raw.githubusercontent.com/dwyl/english-words/master/words.txt
-```
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues or submit pull requests.
+This configuration is based on NvChad, a Neovim configuration framework. Special thanks to the NvChad.

@@ -2,9 +2,10 @@ local M = {}
 
 function M.setup()
 	require("oil").setup({
-		-- view_options = {
-		-- 	show_hidden = true,
-		-- },
+		view_options = {
+			show_hidden = true,
+		},
+    default_file_explorer = true,
 	})
 
   vim.keymap.set("n", "<leader>o", function()

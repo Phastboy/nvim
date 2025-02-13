@@ -13,3 +13,7 @@ end, {})
 set("n", "<leader>lp", function()
 	require("lazy").profile()
 end, { desc = "Lazy Profile" })
+
+set("n", "K", vim.lsp.buf.hover, { desc = "Show Documentation" })
+set("n", "gd", vim.lsp.buf.definition, { desc = "Go to Definition" })
+set("n", "gr", "<cmd>Telescope lsp_references<cr>", { desc = "References" })

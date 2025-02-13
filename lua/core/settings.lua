@@ -5,7 +5,6 @@ opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.termguicolors = true
--- vim.cmd([[colorscheme tokyonight]])
 
 -- Indentation
 opt.tabstop = 2

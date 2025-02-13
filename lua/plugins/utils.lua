@@ -16,4 +16,6 @@ return {
 			require("config.telescope").setup()
 		end,
 	},
+	"NvChad/nvcommunity",
+	{ import = "nvcommunity.editor.treesittercontext" },
 }

@@ -1,3 +1,5 @@
+require "nvchad.options"
+
 local opt = vim.opt
 
 -- UI
@@ -5,6 +7,7 @@ opt.number = true
 opt.relativenumber = true
 opt.cursorline = true
 opt.termguicolors = true
+opt.cursorlineopt ='both'
 
 -- Indentation
 opt.tabstop = 2
@@ -48,3 +51,13 @@ opt.maxmempattern = 2000
 opt.swapfile = false
 opt.backup = false
 opt.writebackup = false
+
+-- Track performance metrics
+vim.api.nvim_create_user_command("PerfReport", function()
+	local stats = require("lazy").stats()
+	local report = string.format("Startup: %dms (Loaded %d/%d plugins)", stats.startuptime, stats.loaded, stats.count)
+	print(report)
+end, {})
+
+-- add yours here!
+

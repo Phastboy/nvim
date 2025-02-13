@@ -1,7 +1,7 @@
 return {
 	{
 		"stevearc/oil.nvim",
-		-- lazy = false, -- Load immediately since it replaces netrw
+		lazy = false, -- Load immediately since it replaces netrw
     dependencies = {
     "nvim-tree/nvim-web-devicons"
   },

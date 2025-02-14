@@ -16,13 +16,4 @@ return {
 			require("config.telescope").setup()
 		end,
 	},
-	{
-		"rmagatti/auto-session",
-		opts = {
-			log_level = "error",
-			auto_session_suppress_dirs = { "~/Downloads", "/tmp" },
-		},
-	},
-	"NvChad/nvcommunity",
-	{ import = "nvcommunity.editor.treesittercontext" },
 }

@@ -13,9 +13,7 @@ return {
 		picker = { enabled = true },
 		notifier = { enabled = true },
 		quickfile = { enabled = true },
-		git = { enabled = true },
 		lazygit = { enabled = true },
-		scope = { enabled = true },
 		words = { enabled = true },
 	},
 }
